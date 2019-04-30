@@ -1,0 +1,42 @@
+public class Propiedad
+{
+    private String nombre;
+    private String propietario;
+    private String area;
+    private String habitantes;
+    public Propiedad()
+    {
+        
+    }
+    public Propiedad(String nombre,String propietario,String area,String habitantes)
+    {
+        this.nombre=nombre;
+        this.propietario=propietario;
+        this.area=area;
+        this.habitantes= habitantes;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public String getPropietario(){
+        return propietario;
+    }
+    public String getArea(){
+        return area;
+    }
+    public String getHabitantes(){
+        return habitantes;
+    }
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
+    public void setPropietario(String propiedad){
+        this.propietario=propietario;
+    }
+    public void setArea (String area){
+        this.area=area;
+    }
+    public void setHabitantes(String habitantes){
+        this.habitantes=habitantes;
+    }
+}
