@@ -1,0 +1,75 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.border.TitledBorder;
+public class JFAdministracion extends JFrame
+{
+    private JPanel p,b,r;
+    private JButton b1, b2, b3;
+    private JCheckBox c1,c2;
+    private JLabel l1,l2,l3,l4,l5;
+    private JTextArea t1,t2,t3,t4,t5;
+    public JFAdministracion(){
+        setTitle("Ejercicio de Administracion de Condominio");
+        setVisible(true);
+        setSize(350,400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setResizable(false);
+        setLayout(new BorderLayout());
+        //Crear panel p: "Datos de la propiedad"
+        p=new JPanel();
+        p.setLayout(new GridLayout(5,2,5,5));
+        p.setPreferredSize(new Dimension (350,200));
+        p.setBackground(Color. orange);
+        p.setBorder(new TitledBorder("Datos de la propiedad"));
+        
+        //Creal panel b: "Descuentos"
+        b=new JPanel();
+        b.setLayout(new FlowLayout());
+        b.setPreferredSize(new Dimension (350,100));
+        b.setBackground(Color. yellow);
+        b.setBorder(new TitledBorder("Descuentos"));
+        //Creal panel r: "Calculos y resultados"
+        r=new JPanel();
+        r.setLayout(new GridLayout(2,2,5,5));
+        r.setPreferredSize(new Dimension (350,100));
+        r.setBackground(Color. pink);
+        r.setBorder(new TitledBorder("Calculos y Resultados"));
+        
+        add(p,BorderLayout.NORTH);
+        add(b,BorderLayout.CENTER);
+        add(r,BorderLayout.SOUTH);
+        
+        l1=new JLabel ("Nombre:");
+        l2=new JLabel ("Propietario:");
+        l3=new JLabel ("Area:");
+        l4=new JLabel ("Habitantes:");
+        t1=new JTextArea ("");
+        t2=new JTextArea ("");
+        t3=new JTextArea ("");
+        t4=new JTextArea ("");
+        b1=new JButton ("Buscar");
+        p.add(l1);
+        p.add(t1);
+        p.add(l2);
+        p.add(t2);
+        p.add(l3);
+        p.add(t3);
+        p.add(l4);
+        p.add(t4);
+        
+        c1= new JCheckBox("Pronto Pago");
+        c2= new JCheckBox("Pago Plataforma");
+        b.add(c1);
+        b.add(c2);
+        
+        l5=new JLabel ("Valor a pagar: $");
+        t5=new JTextArea("");
+        b2=new JButton ("Calcular");
+        b3=new JButton ("Limpiar");
+        r.add(l5);
+        r.add(t5);
+        r.add(b2);
+        r.add(b3);
+    }
+}
